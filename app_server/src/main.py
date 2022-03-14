@@ -8,7 +8,7 @@ async def root():
     return {"message": "Hello World"}
 
 @app.get("/health")
-async def root(response: Response):
+async def health(response: Response):
     status_code = os.getenv("RETURN_CODE")
     if status_code:
         status_code = int(status_code)
